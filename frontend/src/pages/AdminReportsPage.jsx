@@ -29,7 +29,7 @@ function AdminReportsPage({ currentUser, setCurrentView, token }) {
         fetch(`${BASE_URL}/reports/category-sales`, {
           headers: { 'Authorization': `Bearer ${token}` }
         }),
-        fetch(`${BASE_URL}/inventory`, {
+        fetch(`${BASE_URL}/reports/inventory`, {
           headers: { 'Authorization': `Bearer ${token}` }
         })
       ]);

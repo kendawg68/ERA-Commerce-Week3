@@ -44,7 +44,8 @@ function CartPage({ cart, setCart, currentUser, setCurrentView, token }) {
     try {
       const orderItems = cart.map(item => ({
         product_id: item.id,
-        quantity: item.quantity
+        quantity: item.quantity, 
+        price_at_purchase: item.price
       }));
 
       const response = await fetch(`${BASE_URL}/orders`, {
